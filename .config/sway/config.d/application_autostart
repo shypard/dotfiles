@@ -1,0 +1,15 @@
+# Desktop notifications
+exec dunstctl set-paused true
+
+# Autotiling
+exec autotiling
+
+# Wlsunset
+exec ~/.config/sway/scripts/light.sh
+
+# Clipman
+exec clipman restore
+exec wl-paste -t text --watch clipman store
+
+# for Touchpad gestures
+exec libinput-gestures-setup start
