@@ -5,7 +5,7 @@ This repository serves as an example how to setup Fedora Linux and install basic
 ## Fedora Installation
 
 1. Download the "Everything" Image from the (https://alt.fedoraproject.org/)[Fedora Website]
-2. During the Fedora installation process, make sure to select the "i3" Software Selection
+2. During the Fedora installation process, make sure to select only the Fedora Basic Software Selection.
 3. Let the automatic installer rrun
 
 ## Sway and Friends
@@ -13,26 +13,44 @@ This repository serves as an example how to setup Fedora Linux and install basic
 Switch to root and run following instructions.
 
 ```bash
-sudo -i
-
 # enable 3rd party repos
 dnf copr enable eddsalkield/swaylock-effects -y
 dnf copr enable alebastr/sway-extras -y
 
-# install sway applications
-dnf install sway waybar swayidle swaybg bemenu wob -y       # sway basics
-dnf install clipman wl-clipboard -y                         # clipboard
-dnf install wdisplays wlsunset light -y                     # display settings
-dnf install grim slurp swappy -y                            # screenshotting
-dnf install xdg-desktop-portal-wlr xdg-desktop-portal -y    # screen sharing
-dnf install zsh alacritty -y                                # shell and terminal
-dnf install wofi nwg-launchers -y                           # launcher and menu
-dnf install swaylock-effects -y                             # lockscreen
-dnf install greetd-tuigreet -y                              # install greetd + tuigreet as display manager
+# sway basics
+dnf install sway waybar swayidle swaybg bemenu wob -y
 
-# prepare systemd service
-systemctl set-default graphical.target                      # make sure we don't boot into "text mode"
-systemctl enable --now greetd.service                       # enable systemd daemon
+# clipboard
+dnf install clipman wl-clipboard -y
+
+# display settings
+dnf install wdisplays wlsunset light -y
+
+# screenshotting
+dnf install grim slurp swappy -y
+
+# screen sharing
+dnf install xdg-desktop-portal-wlr xdg-desktop-portal -y
+
+# shell and terminal
+dnf install zsh alacritty -y
+
+# launcher and menu
+dnf install wofi nwg-launchers -y
+
+# lockscreen
+dnf install swaylock-effects -y
+
+# install greetd + tuigreet as display manager
+dnf install greetd-tuigreet -y
+
+# make sure we don't boot into "text mode"
+systemctl set-default graphical.target
+
+# enable systemd daemon
+systemctl enable --now greetd.service
+
+# Setup greetd daemon to use tuigreet
 cat > /etc/greetd/config.toml << EOF
 [terminal]
 vt = "current"
@@ -40,8 +58,9 @@ vt = "current"
 [default_session]
 command = "tuigreet --cmd sway -w 40 -g 'Log in' -r -t --asterisks"
 user = "greeter"
-EOF                                                         # configure greetd
+EOF
 
+# reboot into graphical target
 reboot
 ```
 
@@ -77,11 +96,15 @@ sudo dnf install -y \
 
 # Post Install
 sudo systemctl enable docker
+
+# Remove unused Term Emulators
 ```
 
 ## Install Dotfiles
+
+Make sure your git configuration is correctly setup.
+
 ```bash
-git clone git@github.com:shypard/dotfiles.git $HOME/.config
-git config --local status.showUntrackedFiles no
-git checkout && git reset --hard
+git clone git@github.com:shypard/dotfiles.git
+cp -r dotfiles/.config $HOME/
 ```
