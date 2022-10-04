@@ -14,7 +14,6 @@ input type:touchpad {
 #
 input type:keyboard {
    xkb_layout "de"
-   xkb_options caps:swapescape
 }
 
 exec_always {

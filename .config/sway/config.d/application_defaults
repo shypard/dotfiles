@@ -18,6 +18,7 @@ for_window [title="Ulauncher Preferences"] floating enable, move position center
 for_window [app_id="(?i)nm-connection-editor"] floating enable
 for_window [title="^Android Emulator"] floating enable, move to scratchpad
 for_window [title="^Emulator$"] floating enable, move to scratchpad
+for_window [title="wdisplays"] floating enable, move to scratchpad
 for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
 for_window [app_id="firedragon" title="Library"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
@@ -29,6 +30,8 @@ for_window [app_id="firedragon" title="firedragon — Sharing Indicator"] kill
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
 for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky enable
 for_window [title="^yarn start "] floating enable, move to scratchpad, resize set width 80 ppt height 90 ppt
+for_window [title="nm_tui_win"] floating enable
+
 
 # set floating for window roles
 for_window [window_role="pop-up"] floating enable

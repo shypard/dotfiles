@@ -219,3 +219,9 @@ bindsym ctrl+mod1+space exec dunstctl close-all
 bindsym ctrl+mod1+h exec dunstctl history-pop
 bindsym ctrl+mod1+period exec dunstctl action
 bindsym ctrl+mod1+m exec dunstctl set-paused toggle
+
+# Bluetooth Applet
+exec --no-startup-id 'blueman-applet'
+
+# Network Manager Applet
+exec --no-startup-id 'nm-applet --indicator'
