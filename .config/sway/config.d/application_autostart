@@ -1,5 +1,5 @@
 # Desktop notifications
-exec dunstctl set-paused true
+exec mako
 
 # Autotiling
 exec autotiling
@@ -13,3 +13,9 @@ exec wl-paste -t text --watch clipman store
 
 # for Touchpad gestures
 exec libinput-gestures-setup start
+
+# bluetooth applet
+exec --no-startup-id 'blueman-applet'
+
+# Network manager applet
+exec --no-startup-id 'nm-applet --indicator'

@@ -1,5 +1,5 @@
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 
 # Home row direction keys, like vim
 set $left h
@@ -13,10 +13,10 @@ set $term-float alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-# set $menu wofi -c ~/.config/wofi/config -I
-set $menu ulauncher-toggle
+set $launcher wofi -c ~/.config/wofi/config -I
 
-set $launcher nwggrid
+# set $menu ulauncher-toggle
+# set $launcher nwggrid
 
 set $powermenu nwgbar
 
@@ -209,19 +209,7 @@ bindsym Shift+print exec grim -g "$(slurp)" - | swappy -f -
 #
 # mako
 #
-#bindsym ctrl+mod1+space exec makoctl dismiss -a
-#bindsym ctrl+mod1+h exec makoctl restore
+bindsym ctrl+mod1+space exec makoctl dismiss -a
+bindsym ctrl+mod1+h exec makoctl restore
 
-#
-# dunstctl
-#
-bindsym ctrl+mod1+space exec dunstctl close-all
-bindsym ctrl+mod1+h exec dunstctl history-pop
-bindsym ctrl+mod1+period exec dunstctl action
-bindsym ctrl+mod1+m exec dunstctl set-paused toggle
 
-# Bluetooth Applet
-exec --no-startup-id 'blueman-applet'
-
-# Network Manager Applet
-exec --no-startup-id 'nm-applet --indicator'

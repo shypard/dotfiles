@@ -49,20 +49,24 @@ window#waybar {
 }
 
 #pulseaudio {
-	color: #268bd2;
+	color: #6272a4;
 }
 #memory {
-	color: #2aa198;
+	color: #8be9fd;
 }
 #cpu {
-	color: #6c71c4;
+	color: #50fa7b;
 }
 #battery {
-	color: #859900;
+	color: #ffb86c;
 }
 #disk {
-	color: #b58900;
+	color: #ff79c6;
 }
+#network {
+    color: #bd93f9;
+}
+
 
 #clock,
 #pulseaudio,

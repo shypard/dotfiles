@@ -23,10 +23,16 @@
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
+        "bluetooth",
+    	"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"memory",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"cpu",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+        "network",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"battery",
@@ -96,7 +102,19 @@
 		"interval": 5,
 		"format": "CPU {usage:2}%"
 	},
-	"battery": {
+    "network": {
+        "interface": "wlp0s20f3",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "battery": {
 		"states": {
 			"good": 95,
 			"warning": 30,
@@ -111,6 +129,22 @@
 			""
 		]
 	},
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "",
+        "interval": 30,
+        "on-click": "blueman-manager",
+        "on-click-right": "rfkill toggle bluetooth",
+        "tooltip-format": "{}"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", ""],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
+    },    
+
 	"disk": {
 		"interval": 5,
 		"format": "Disk {percentage_used:2}%",
