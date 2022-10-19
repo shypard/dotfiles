@@ -9,6 +9,7 @@ dotfiles=(
     "$HOME/.config/ranger"
     "$HOME/.config/swaylock"
     "$HOME/.config/wofi"
+    "$HOME/.config/mako"
 )
 
 # copy all files to this directory
