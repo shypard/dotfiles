@@ -67,3 +67,6 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 :inoremap kj <Esc>
 :vnoremap jk <Esc>
 :vnoremap kj <Esc>
+
+" copy and paste
+set clipboard+=unnamedplus
