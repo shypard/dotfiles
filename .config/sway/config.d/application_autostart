@@ -19,3 +19,6 @@ exec --no-startup-id 'blueman-applet'
 
 # Network manager applet
 exec --no-startup-id 'nm-applet --indicator'
+
+# Gnome keyring
+exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
