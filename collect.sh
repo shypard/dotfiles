@@ -10,6 +10,7 @@ dotfiles=(
     "$HOME/.config/swaylock"
     "$HOME/.config/wofi"
     "$HOME/.config/mako"
+    "$HOME/.config/aerc"
 )
 
 # copy all files to this directory

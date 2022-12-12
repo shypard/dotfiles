@@ -83,7 +83,8 @@ sudo dnf group install "Hardware Support"
 sudo dnf install -y \
     polkit \
     NetworkManager-tui \
-    blueman
+    blueman \
+    pass
 
 # Install Desktop Applications
 sudo dnf install -y \
