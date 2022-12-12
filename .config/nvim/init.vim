@@ -31,6 +31,7 @@ call plug#begin("~/.vim/plugged")
  Plug 'scrooloose/nerdtree'
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
+ Plug 'lervag/vimtex'
 call plug#end()
 
 
