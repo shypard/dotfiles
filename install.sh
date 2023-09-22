@@ -6,7 +6,7 @@ tmp_dir=$(mktemp -d)
 cd "$tmp_dir"
 
 # Clone the dotfiles repo
-git clone git@github.com:shypard/dotfiles.git dotfiles
+git clone -q git@github.com:shypard/dotfiles.git dotfiles 
 cd dotfiles
 
 # Define the backup directory
@@ -15,7 +15,7 @@ mkdir -p "$backup_dir"
 
 # Copy original files to the backup directory
 for f in $(ls .config); do
-    cp -r "~/.config/$f" "$backup_dir/$f"
+    cp -r "~/.config/$f" "$backup_dir/$f" 2>/dev/null || true
 done
 
 # Create a tarball of the backup directory

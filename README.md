@@ -133,8 +133,7 @@ This is already done within the configuration files. The following table lists t
 Make sure your git configuration is correctly setup.
 
 ```bash
-git clone git@github.com:shypard/dotfiles.git
-cp -rf dotfiles/.config $HOME/
+curl -sSL https://raw.githubusercontent.com/shypard/dotfiles/main/install.sh | bash
 ```
 
 ## Troubleshooting
@@ -142,4 +141,3 @@ cp -rf dotfiles/.config $HOME/
 * Reload Sway: `Mod+Shift+c`
 * Check if Sway detects all monitors: ``swaymsg -t get_ouputs``
 * Enable a display: ``swaymsg output DP-4 enabl``
-*
