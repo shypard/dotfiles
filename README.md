@@ -119,15 +119,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 sudo dnf remove foot
 ```
 
-## Colorize with Gruvbox
-
-This is already done within the configuration files. The following table lists the sources for the colors.
-
-| Application | Source                                     |
-| ----------- | ------------------------------------------ |
-| Zathura     | https://github.com/eastack/zathura-gruvbox |
-
-
 ## Install Dotfiles
 
 Make sure your git configuration is correctly setup.
@@ -135,6 +126,14 @@ Make sure your git configuration is correctly setup.
 ```bash
 curl -sSL https://raw.githubusercontent.com/shypard/dotfiles/main/install.sh | bash
 ```
+
+## Colorize with Gruvbox
+
+This is already done within the configuration files. The following table lists the sources for the colors.
+
+| Application | Source                                     |
+| ----------- | ------------------------------------------ |
+| Zathura     | https://github.com/eastack/zathura-gruvbox |
 
 ## Troubleshooting
 
