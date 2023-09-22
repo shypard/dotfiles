@@ -2,6 +2,7 @@
 # Collects all desired dotfiles and copies them to this git repository
 
 dotfiles=(
+    "$HOME/.config/zathura"
     "$HOME/.config/alacritty"
     "$HOME/.config/nvim"
     "$HOME/.config/sway"
