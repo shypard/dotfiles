@@ -20,7 +20,7 @@ done
 
 # Create a tarball of the backup directory
 tarball="dotfiles-backup-$(date +%Y-%m-%d_%H%M%S).tar.gz"
-tar -czvf $tarball $backup_dir
+tar -czvf $tarball $backup_dir 2>/dev/null
 
 echo "Backup created at $tarball. Installing new dotfiles..."
 
