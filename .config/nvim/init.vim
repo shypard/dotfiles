@@ -25,7 +25,7 @@ set ttyfast                 " Speed up scrolling in Vim
 
 call plug#begin("~/.vim/plugged")
  " Plugin Section
- Plug 'dracula/vim'
+ Plug 'morhetz/gruvbox'
  Plug 'ryanoasis/vim-devicons'
  Plug 'honza/vim-snippets'
  Plug 'scrooloose/nerdtree'
@@ -41,7 +41,7 @@ if (has("termguicolors"))
 endif
 
 syntax enable
-colorscheme dracula
+colorscheme gruvbox
 
 " open new split panes to right and below
 set splitright
@@ -73,3 +73,16 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " copy and paste
 set clipboard+=unnamedplus
+
+" NerdTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" VimTex
+filetype plugin indent on
+syntax enable
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compile_method = 'latexmk'
+let maplocalleader = '\'
