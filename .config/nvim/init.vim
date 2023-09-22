@@ -25,7 +25,7 @@ set ttyfast                 " Speed up scrolling in Vim
 
 call plug#begin("~/.vim/plugged")
  " Plugin Section
- Plug 'morhetz/gruvbox'
+ Plug 'sainnhe/gruvbox-material'
  Plug 'ryanoasis/vim-devicons'
  Plug 'honza/vim-snippets'
  Plug 'scrooloose/nerdtree'
@@ -34,14 +34,16 @@ call plug#begin("~/.vim/plugged")
  Plug 'lervag/vimtex'
 call plug#end()
 
-
 " color schemes
 if (has("termguicolors"))
  set termguicolors
 endif
 
-syntax enable
-colorscheme gruvbox
+" Enable gruvbox colors
+set background=dark
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_better_performance = 1
+colorscheme gruvbox-material
 
 " open new split panes to right and below
 set splitright
