@@ -131,9 +131,26 @@ curl -sSL https://raw.githubusercontent.com/shypard/dotfiles/main/install.sh | b
 
 This is already done within the configuration files. The following table lists the sources for the colors.
 
-| Application | Source                                     |
-| ----------- | ------------------------------------------ |
-| Zathura     | https://github.com/eastack/zathura-gruvbox |
+| App       | Source                                                           |
+| --------- | ---------------------------------------------------------------- |
+| Zathura   | https://github.com/eastack/zathura-gruvbox                       |
+| NVim      | https://github.com/sainnhe/gruvbox-material                      |
+| Alacritty | https://gist.github.com/sainnhe/ad5cbc4f05c4ced83f80e54d9a75d22f |
+
+## Try it out
+
+There is a Vagrantfile in the root directory, which starts a Fedora-38 VM,
+installs the requirements and pulls the dotfiles. This way you can inspect the
+configuration without install it to your live system.
+
+```bash
+# Install vagrant
+$ sudo dnf install vagrant
+$ vagrant plugin install vagrant-libvirt
+$ vagrant up --provider=libvirt
+```
+
+You can login using the username `vagrant` and password `vagrant`.
 
 ## Troubleshooting
 
