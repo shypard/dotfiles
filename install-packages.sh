@@ -2,7 +2,8 @@
 set -e
 
 # enable 3rd party repositories
-sudo dnf copr enable swayfx/swayfx
+sudo dnf copr enable -y \
+    swayfx/swayfx
 
 # installing login- and window manager
 sudo dnf install -y \

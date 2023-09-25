@@ -124,7 +124,7 @@ sudo dnf remove foot
 Make sure your git configuration is correctly setup.
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/shypard/dotfiles/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/shypard/dotfiles/main/install-dotfiles.sh | bash
 ```
 
 ## Colorize with Gruvbox
