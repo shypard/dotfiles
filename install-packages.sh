@@ -20,6 +20,7 @@ sudo dnf install -y \
 # configure tui-greet
 sudo systemctl set-default graphical.target
 sudo systemctl enable --now greetd.service
+
 cat > /etc/greetd/config.toml << EOF
 [terminal]
 vt = "current"
@@ -29,4 +30,4 @@ command = "tuigreet --cmd sway -w 40 -g 'Log in' -r -t --asterisks --power-shutd
 user = "greeter"
 EOF
 
-
+echo "Done"
