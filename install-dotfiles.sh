@@ -22,11 +22,10 @@ done
 tarball="dotfiles-backup-$(date +%Y-%m-%d_%H%M%S).tar.gz"
 tar -czvf $tarball $backup_dir 2>/dev/null
 
-echo "Backup created at $tarball. Installing new dotfiles..."
-#> dnf copr enable swayfx/swayfx
+echo "Backup created at $tmp_dir/$tarball. Installing new dotfiles..."
 
 # Copy all files to ~/.config
-cp -r dotfiles/.config/* ~/.config/
+mkdir -p ~/.config && cp -r dotfiles/.config/* ~/.config/
 
 echo "Installation complete! Cleaning up..."
 

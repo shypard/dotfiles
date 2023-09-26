@@ -22,7 +22,7 @@ sudo dnf install -y \
 sudo systemctl set-default graphical.target
 sudo systemctl enable --now greetd.service
 
-cat > /etc/greetd/config.toml << EOF
+sudo cat > /etc/greetd/config.toml << EOF
 [terminal]
 vt = "current"
 
