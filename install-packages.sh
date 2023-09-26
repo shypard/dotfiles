@@ -15,7 +15,8 @@ sudo dnf install -y \
     alacritty \
     zsh \
     neovim \
-    zathura
+    zathura \
+    git
 
 # configure tui-greet
 sudo systemctl set-default graphical.target
