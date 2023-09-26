@@ -6,7 +6,7 @@ tmp_dir=$(mktemp -d)
 cd "$tmp_dir"
 
 # Clone the dotfiles repo
-git clone -q git@github.com:shypard/dotfiles.git dotfiles 
+git clone -q https://github.com/shypard/dotfiles.git dotfiles
 
 # Define the backup directory
 backup_dir="$tmp_dir/backup"

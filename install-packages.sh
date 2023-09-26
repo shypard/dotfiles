@@ -17,13 +17,9 @@ sudo dnf install -y \
     neovim \
     zathura
 
-echo "Done installing"
-
 # configure tui-greet
 sudo systemctl set-default graphical.target
 sudo systemctl enable --now greetd.service
-
-echo "Configuring greetd"
 
 cat > /etc/greetd/config.toml << EOF
 [terminal]

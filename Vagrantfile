@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Install necessary tools
   config.vm.provision "shell", inline: <<-SHELL
-    sudo dnf install git -y
+    echo "Hello, World!"
     curl -sSL https://raw.githubusercontent.com/shypard/dotfiles/main/install-packages.sh | bash
     curl -sSL https://raw.githubusercontent.com/shypard/dotfiles/main/install-dotfiles.sh | bash
   SHELL
