@@ -4,6 +4,9 @@ window:
   class: 
     instance: Alacritty
     general: Alacritty
+  dimensions:
+    columns: 160
+    lines: 45
 
 font:
   size: 10.0

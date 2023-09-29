@@ -8,7 +8,8 @@ sudo dnf copr enable -y \
 # installing login- and window manager
 sudo dnf install -y \
     greetd-tuigreet \
-    swayfx
+    sway
+#    swayfx \
 
 # installing user applications
 sudo dnf install -y \
@@ -19,9 +20,6 @@ sudo dnf install -y \
     git
 
 # configure tui-greet
-sudo systemctl set-default graphical.target
-sudo systemctl enable --now greetd.service
-
 sudo cat > /etc/greetd/config.toml << EOF
 [terminal]
 vt = "current"
@@ -30,5 +28,8 @@ vt = "current"
 command = "tuigreet --cmd sway -w 40 -g 'Log in' -r -t --asterisks --power-shutdown 'sudo systemctl poweroff'"
 user = "greeter"
 EOF
+
+sudo systemctl set-default graphical.target
+sudo systemctl enable --now greetd.service
 
 echo "Done"

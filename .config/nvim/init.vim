@@ -32,6 +32,7 @@ call plug#begin("~/.vim/plugged")
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
  Plug 'lervag/vimtex'
+ Plug 'github/copilot.vim'
 call plug#end()
 
 " color schemes
