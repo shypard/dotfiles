@@ -10,5 +10,11 @@ let g:neoformat_c_clangformat = {
     \ 'stdin': 1
     \ }
 
+let g:neoformat_tex_latexindent = {
+    \ 'exe': 'latexindent',
+    \ 'args': ['--local --modifylinebreaks'],
+    \ 'stdin': 1
+    \ }
+
 " create shortcut for neoformat
 nnoremap <leader>f :Neoformat<CR>

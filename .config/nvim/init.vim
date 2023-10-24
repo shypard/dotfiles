@@ -26,6 +26,7 @@ filetype plugin on
 set cursorline
 set ttyfast
 set list listchars+=space:. listchars-=eol:$
+set encoding=UTF-8
 
 " Sourcing the plugin manager and color scheme files
 source ~/.config/nvim/plugins.vim
