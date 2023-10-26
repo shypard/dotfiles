@@ -1,0 +1,24 @@
+### Output configuration
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+#
+# Wacom Tablet - Example
+#   input "1386:884:Wacom_Intuos_S_Pad" map_to_output HDMI-A-1
+#   input "1386:884:Wacom_Intuos_S_Pen" map_to_output HDMI-A-1
+
+# Laptop configuration
+output "Philips Consumer Electronics Company PHL 241B8Q ZV02203007229" resolution 1920x1080 position 0,0
+output "Philips Consumer Electronics Company PHL 241B8Q ZV02203007227" resolution 1920x1080 position 1920,0
+output eDP-1 resolution 1920x1080 position 3840,0
+
+# remove output if laptop lid is closed
+set $laptop eDP-1
+bindswitch --locked lid:on output $laptop disable
+bindswitch --locked lid:off output $laptop enable
+
+# Workstation configuration
+
