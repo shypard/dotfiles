@@ -12,10 +12,13 @@ git clone -q https://github.com/shypard/dotfiles.git dotfiles
 backup_dir="$tmp_dir/backup"
 mkdir -p "$backup_dir"
 
+# determine the configs to install
+packages=$(grep -v ^# packages.txt | grep -v ^$)
+
 # Copy original files to the backup directory
-for f in $(ls dotfiles/.config); do
-    echo "Backing up $f..."
-    cp -r ~/.config/$f $backup_dir/$f 2>/dev/null || true
+for p in $packages; do
+    echo "Backing up $p..."
+    cp -r ~/.config/$p $backup_dir/$p 2>/dev/null || true
 done
 
 # Create a tarball of the backup directory

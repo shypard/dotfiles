@@ -2,7 +2,9 @@
 
 set -e
 
+packages=$(grep -v ^# packages.txt | grep -v ^$)
+
 # copy all configured dotfiles to this repository
-for f in $(ls .config); do
-    cp --recursive --update ~/.config/$f .config
+for p in $packages; do
+    cp --recursive --update ~/.config/$p .config
 done

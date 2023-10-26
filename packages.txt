@@ -1,0 +1,6 @@
+# The following contains a list of packages, which are to be used with these
+# dotfiles. Comments can be added with a `#` at the beginning of the line.
+
+alacritty
+nvim
+zathura
