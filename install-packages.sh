@@ -1,18 +1,14 @@
 #!/bin/bash
 set -e
 
-# enable 3rd party repositories
-sudo dnf copr enable -y \
-    swayfx/swayfx
-
 # installing login- and window manager
 sudo dnf install -y \
     greetd-tuigreet \
-    seatd \
-    swayfx
+    seatd
 
 # installing user applications
 sudo dnf install -y \
+    dnf-plugins-core \
     alacritty \
     zsh \
     neovim \
@@ -43,7 +39,5 @@ sudo systemctl enable --now seatd.service
 
 # add user to seat group
 sudo usermod -a -G seat $(whoami)
-
-
 
 echo "Done"
