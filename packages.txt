@@ -4,8 +4,8 @@
 alacritty
 mako
 nvim
-rofi
 sway
 swaylock
 waybar
+wofi
 zathura
