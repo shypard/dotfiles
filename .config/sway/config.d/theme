@@ -1,12 +1,12 @@
 # Set inner/outer gaps
-gaps inner 0 
+gaps inner 5
 gaps outer 0
 
 # Hide titlebar on windows:
 default_border pixel 1
 
 # Default Font
-font pango:Noto Sans Regular 10
+font pango:Dejavu Sans Mono 12
 
 # Thin borders:
 smart_borders on

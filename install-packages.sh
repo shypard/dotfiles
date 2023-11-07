@@ -7,14 +7,16 @@ sudo dnf install -y \
     seatd
 
 # installing user applications
-sudo dnf install -y \
-    dnf-plugins-core \
-    alacritty \
-    zsh \
-    neovim \
-    zathura \
-    git \
-    wofi
+sudo dnf install -y     \
+    alacritty           \
+    dnf-plugins-core    \
+    git                 \
+    mako                \
+    neovim              \
+    wofi                \
+    zathura             \
+    zathura-plugins-all \
+    zsh
 
 # configure tui-greet
 sudo cat << EOF | sudo tee /etc/greetd/config.toml
