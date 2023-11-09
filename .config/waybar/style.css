@@ -76,7 +76,6 @@
     color: #e2cca9;
     font-size: 13px;
     background-color: #32302f;
-    padding: 0 3 0 3;
 }
 
 #cpu,
@@ -88,7 +87,6 @@
     color: #e2cca9;
     font-size: 13px;
     background-color: #3c3836;
-    padding: 0 3 0 3;
 }
 
 /*
@@ -134,7 +132,7 @@
     color: #80aa9e;
 }
 
-tooltip {
+#tooltip {
     color: #e2cca9;
     font-size: 13px;
     background-color: #32302f;
