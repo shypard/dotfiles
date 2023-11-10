@@ -1,7 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: my-queue;
+    font-family: DejaVu Sans Mono;
+    font-size: 16px;
 }
 
 #waybar {
@@ -11,7 +12,6 @@
 #workspaces button {
     color: #e2cca9;
     background-color: #32302f;
-    font-size: 13px;
 }
 
 #workspaces button:hover,
@@ -39,13 +39,11 @@
  * Arrows
  */
 #custom-arrow-light-on-bg-left {
-    font-size: 15px;
     color: #3c3836;
     background-color: transparent;
 }
 
 #custom-arrow-dark-on-bg-right {
-    font-size: 15px;
     color: #32302f;
     background-color: transparent;
    
@@ -53,14 +51,12 @@
 
 #custom-arrow-light-on-dark-left,
 #custom-arrow-light-on-dark-right {
-    font-size: 15px;
     color: #3c3836;
     background: #32302f;
 }
 
 #custom-arrow-dark-on-light-left,
 #custom-arrow-dark-on-light-right {
-    font-size: 15px;
     color: #32302f;
     background: #3c3836;
 }
@@ -74,7 +70,6 @@
 #language,
 #custom-weather {
     color: #e2cca9;
-    font-size: 13px;
     background-color: #32302f;
     padding: 0 3 0 3;
 }
@@ -86,7 +81,6 @@
 #tray,
 #custom-crypto {
     color: #e2cca9;
-    font-size: 13px;
     background-color: #3c3836;
     padding: 0 3 0 3;
 }
@@ -113,13 +107,11 @@
 
 #mode {
     color: #32302f;
-    font-size: 13px;
     background-color: #f2594b;
 }
 
 #clock {
     color: #e2cca9;
-    font-size: 13px;
 }
 
 #battery.charging {
@@ -134,8 +126,7 @@
     color: #80aa9e;
 }
 
-tooltip {
+#tooltip {
     color: #e2cca9;
-    font-size: 13px;
     background-color: #32302f;
 }
