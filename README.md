@@ -34,20 +34,11 @@ the sources for the colors.
 | NVim      | https://github.com/sainnhe/gruvbox-material                      |
 | Zathura   | https://github.com/eastack/zathura-gruvbox                       |
 
-## Try it out
+## ToDos
 
-There is a Vagrantfile in the root directory, which starts a Fedora-38 VM,
-installs the requirements and pulls the dotfiles. This way you can inspect the
-configuration without install it to your live system.
+This lists various open points, which are left to implement/configure/todo.
 
-```bash
-# Install vagrant
-$ sudo dnf install vagrant
-$ vagrant plugin install vagrant-libvirt
-$ vagrant up --provider=libvirt
-```
-
-You can login using the username `vagrant` and password `vagrant`.
+- Auto mount USB sticks 
 
 ## Troubleshooting
 

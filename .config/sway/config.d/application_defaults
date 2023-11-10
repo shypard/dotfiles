@@ -22,6 +22,7 @@ for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 p
 for_window [title="Save File"] floating enable
 for_window [title="nm_tui_win"] floating enable
 for_window [title="^Signal"] floating enable
+for_window [app_id="virt-manager"] floating enable, resize set width 40ppt height 400ppt, move position center
 
 # set floating for window roles
 for_window [window_role="pop-up"] floating enable
