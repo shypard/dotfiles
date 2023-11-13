@@ -13,6 +13,7 @@ sudo dnf install -y     \
     git                 \
     mako                \
     neovim              \
+    udiskie             \
     wofi                \
     zathura             \
     zathura-plugins-all \

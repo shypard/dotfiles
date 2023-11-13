@@ -4,6 +4,9 @@
 
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
+# Automounter for removable media
+exec udiskie
+
 # Desktop notifications
 # exec mako
 
