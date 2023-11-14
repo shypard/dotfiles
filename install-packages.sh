@@ -14,6 +14,7 @@ sudo dnf install -y     \
     mako                \
     neovim              \
     udiskie             \
+    pandoc              \
     wofi                \
     zathura             \
     zathura-plugins-all \
