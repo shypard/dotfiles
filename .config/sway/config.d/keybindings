@@ -203,9 +203,9 @@ bindsym XF86MonBrightnessDown exec light -U 1 && light -G | cut -d'.' -f1 > $SWA
 #
 # Screenshots
 #
-bindsym print exec grim - | swappy -f -
-bindsym Shift+print exec grim -g "$(slurp)" - | swappy -f -
-
+#bindsym print exec grim - | swappy -f -
+#bindsym Shift+print exec grim -g "$(slurp)" - | swappy -f -
+bindsym print exec grim -g "$(slurp)" - | swappy -f - 
 #
 # mako
 #

@@ -8,7 +8,7 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
 exec udiskie
 
 # Desktop notifications
-# exec mako
+exec mako
 
 # Autotiling
 # exec autotiling

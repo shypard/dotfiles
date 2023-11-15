@@ -11,9 +11,12 @@ sudo dnf install -y     \
     alacritty           \
     dnf-plugins-core    \
     git                 \
+    grim                \
     mako                \
     neovim              \
     udiskie             \
+    slurp               \
+    swappy              \
     pandoc              \
     wofi                \
     zathura             \
