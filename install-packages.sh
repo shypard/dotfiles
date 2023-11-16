@@ -9,6 +9,7 @@ sudo dnf install -y \
 # installing user applications
 sudo dnf install -y     \
     alacritty           \
+    clang               \
     dnf-plugins-core    \
     git                 \
     grim                \
@@ -22,6 +23,9 @@ sudo dnf install -y     \
     zathura             \
     zathura-plugins-all \
     zsh
+
+# install misc
+pip3 install --user jedi --upgrade # neovim python support
 
 # configure tui-greet
 sudo cat << EOF | sudo tee /etc/greetd/config.toml

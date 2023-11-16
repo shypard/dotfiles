@@ -10,4 +10,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'mhinz/vim-startify'
   Plug 'lervag/vimtex'
   Plug 'github/copilot.vim'
-call plug#end()
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'tpope/vim-fugitive'
+"  Plug 'dense-analysis/ale'
+"  Plug 'deoplete-plugins/deoplete-jedi'
+"  Plug 'deoplete-plugins/deoplete-clang'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  call plug#end()
