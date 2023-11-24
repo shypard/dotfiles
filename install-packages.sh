@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+# enable 3rd party repos
+sudo dnf enable -y           \
+    trs-sod/swaylock-effects \
+
 # installing login-, session and window manager
 sudo dnf install -y \
     greetd-tuigreet \
@@ -18,6 +22,7 @@ sudo dnf install -y     \
     udiskie             \
     slurp               \
     swappy              \
+    swaylock-effects    \
     pandoc              \
     wofi                \
     zathura             \
@@ -48,8 +53,9 @@ sudo usermod -a -G seat $(whoami)
 
 # remove unused services and tools
 sudo dnf remove -y \
-    sddm \
-    foot \
-    rofi 
+    sddm           \
+    foot           \
+    rofi           \
+    swaylock       \
 
 echo "Done"

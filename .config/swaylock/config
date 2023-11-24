@@ -12,3 +12,4 @@ indicator
 
 clock
 datestr=%Y-%m-%d (%a)
+grace=10

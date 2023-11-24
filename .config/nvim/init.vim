@@ -37,3 +37,4 @@ source ~/.config/nvim/vimtex.vim
 source ~/.config/nvim/neoformat.vim
 source ~/.config/nvim/deoplete.vim
 source ~/.config/nvim/coc.vim
+source ~/.config/nvim/copilot.vim
