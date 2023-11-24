@@ -21,11 +21,11 @@ set $launcher wofi -c ~/.config/wofi/config -I
 set $powermenu nwgbar
 
 ### Idle configuration
-set $locker 'swaylock -f -c 000000'
-exec swayidle -w \
-    timeout 330 $locker \
-    timeout 300 'swaymsg "output * dpms off"' \
-		resume 'swaymsg "output * dpms on"' \
+set $locker 'swaylock -f'
+exec swayidle -w                                \
+    timeout 330 $locker                         \
+    timeout 300 'swaymsg "output * dpms off"'   \
+    resume 'swaymsg "output * dpms on"'         \
     before-sleep $locker
 
 ## Lock Screen

@@ -12,7 +12,6 @@
     // -------------------------------------------------------------------------
 
     "layer": "top",
-
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
@@ -30,73 +29,32 @@
         "network",
         "memory",
         "cpu",
-        "temperature",
-        "custom/keyboard-layout",
-        "battery",
         "tray",
-        "clock#date",
-        "clock#time"
+        "clock",
     ],
-
 
     // -------------------------------------------------------------------------
     // Modules
     // -------------------------------------------------------------------------
 
-    "battery": {
-        "interval": 10,
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        // Connected to AC
-        "format": "  {icon}  {capacity}%", // Icon: bolt
-        // Not connected to AC
-        "format-discharging": "{icon}  {capacity}%",
-        "format-icons": [
-            "", // Icon: battery-full
-            "", // Icon: battery-three-quarters
-            "", // Icon: battery-half
-            "", // Icon: battery-quarter
-            ""  // Icon: battery-empty
-        ],
-        "tooltip": true
-    },
-
-    "clock#time": {
+    "clock": {
         "interval": 1,
-        "format": "{:%H:%M:%S}",
+        "format": "{:%e %b %H:%M:%S}",
         "tooltip": false
-    },
-
-    "clock#date": {
-      "interval": 10,
-      "format": "  {:%e %b %Y}", // Icon: calendar-alt
-      "tooltip-format": "{:%e %B %Y}"
     },
 
     "cpu": {
         "interval": 5,
-        "format": "  {usage}% ({load})", // Icon: microchip
+        "format": "cpu  {usage}%", 
         "states": {
           "warning": 70,
           "critical": 90
         }
     },
 
-    "custom/keyboard-layout": {
-      "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
-      // Interval set only as a fallback, as the value is updated by signal
-      "interval": 30,
-      "format": "  {}", // Icon: keyboard
-      // Signal sent by Sway key binding (~/.config/sway/key-bindings)
-      "signal": 1, // SIGHUP
-      "tooltip": false
-    },
-
     "memory": {
         "interval": 5,
-        "format": "  {}%", // Icon: memory
+        "format": "mem  {}%", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
@@ -105,8 +63,8 @@
 
     "network": {
         "interval": 5,
-        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
-        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr}", 
         "format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}"
     },
@@ -154,19 +112,6 @@
         "on-click": "pavucontrol"
     },
 
-    "temperature": {
-      "critical-threshold": 80,
-      "interval": 5,
-      "format": "{icon}  {temperatureC}°C",
-      "format-icons": [
-          "", // Icon: temperature-empty
-          "", // Icon: temperature-quarter
-          "", // Icon: temperature-half
-          "", // Icon: temperature-three-quarters
-          ""  // Icon: temperature-full
-      ],
-      "tooltip": true
-    },
 
     "tray": {
         "icon-size": 21,
