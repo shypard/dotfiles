@@ -53,6 +53,9 @@ floating_modifier $mod normal
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
+# Restart sway
+bindsym $mod+Shift+r restart
+
 #
 # Moving around:
 #
