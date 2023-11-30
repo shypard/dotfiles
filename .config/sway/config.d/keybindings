@@ -21,7 +21,7 @@ set $launcher wofi -c ~/.config/wofi/config -I
 set $powermenu nwgbar
 
 ### Idle configuration
-set $locker 'swaylock -f'
+set $locker '$HOME/.config/sway/scripts/lockman.sh'
 exec swayidle -w                                \
     timeout 330 $locker                         \
     timeout 300 'swaymsg "output * dpms off"'   \
