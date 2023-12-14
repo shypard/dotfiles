@@ -16,4 +16,5 @@ call plug#begin("~/.vim/plugged")
 "  Plug 'deoplete-plugins/deoplete-jedi'
 "  Plug 'deoplete-plugins/deoplete-clang'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  call plug#end()
+  Plug 'itchyny/vim-highlighturl'
+call plug#end()

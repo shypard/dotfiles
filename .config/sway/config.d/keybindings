@@ -10,15 +10,8 @@ set $right l
 # Your preferred terminal emulators
 set $term-float alacritty
 
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $launcher wofi -c ~/.config/wofi/config -I
-
-# set $menu ulauncher-toggle
-# set $launcher nwggrid
-
-set $powermenu nwgbar
+# define app launcher script
+set $launcher 'wofi -c $HOME/.config/wofi/config -I'
 
 ### Idle configuration
 set $locker '$HOME/.config/sway/scripts/lockman.sh'
@@ -29,13 +22,13 @@ exec swayidle -w                                \
     before-sleep $locker
 
 ## Lock Screen
-bindsym $mod+x exec ~/.config/sway/scripts/lockman.sh
+bindsym $mod+x exec '$HOME/.config/sway/scripts/lockman.sh'
 
 # Start a floating terminal
 bindsym $mod+Return exec $term-float
 
 # Open the power menu
-bindsym $mod+Shift+e exec ~/.config/sway/scripts/powermenu.sh
+bindsym $mod+Shift+e exec '$HOME/.config/sway/scripts/powermenu.sh'
 
 # Kill focused window
 bindsym $mod+q kill
