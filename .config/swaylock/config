@@ -1,15 +1,14 @@
 daemonize
-
 ignore-empty-password
-
-fade-in=0.1
-
-screenshots
-effect-blur=7x5
-effect-vignette=0.5:0.5
-
-indicator
-
-clock
-datestr=%Y-%m-%d (%a)
-grace=10
+color=000000
+show-failed-attempts
+indicator-idle-visible
+indicator-radius=100
+indicator-thickness=7
+ignore-empty-password
+ring-color=455a6499
+key-hl-color=be504699
+text-color=ffc10799
+line-color=00000000
+inside-color=00000088
+separator-color=00000000

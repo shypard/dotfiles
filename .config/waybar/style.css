@@ -48,7 +48,7 @@
 
 /* The whole bar */
 #waybar {
-    background: rgba(50, 48, 48, 0.95);
+    background: rgba(50, 48, 48, 0.75);
     color: white;
     font-family: Noto Sans, sans-serif;
     font-size: 16px;

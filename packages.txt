@@ -6,6 +6,7 @@ mako
 nvim
 sway
 swaylock
+swayidle
 waybar
 wofi
 zathura

@@ -1,0 +1,10 @@
+lock "$HOME/.config/sway/scripts/lockscreen.sh"
+unlock "pkill -9 swaylock"
+
+idlehint 580
+before-sleep "$HOME/.config/sway/scripts/lockscreen.sh"
+
+timeout 600 "$HOME/.config/sway/scripts/lockscreen.sh"
+timeout 960 "swaymsg 'output * dpms off'" resume "swaymsg 'output * dpms on'"
+
+after-resume "swaymsg 'output * dpms on'"

@@ -2,8 +2,9 @@
 set -e
 
 # enable 3rd party repos
-sudo dnf enable -y           \
-    trs-sod/swaylock-effects \
+sudo dnf enable -y \
+    eddsalkield/swaylock-effects \
+
 
 # installing login-, session and window manager
 sudo dnf install -y \
@@ -28,6 +29,7 @@ sudo dnf install -y     \
     zathura             \
     zathura-plugins-all \
     zsh
+
 
 # install misc
 pip3 install --user jedi --upgrade # neovim python support
@@ -56,6 +58,5 @@ sudo dnf remove -y \
     sddm           \
     foot           \
     rofi           \
-    swaylock       \
 
 echo "Done"

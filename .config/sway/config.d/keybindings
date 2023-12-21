@@ -13,16 +13,8 @@ set $term-float alacritty
 # define app launcher script
 set $launcher 'wofi -c $HOME/.config/wofi/config -I'
 
-### Idle configuration
-set $locker '$HOME/.config/sway/scripts/lockman.sh'
-exec swayidle -w                                \
-    timeout 330 $locker                         \
-    timeout 300 'swaymsg "output * dpms off"'   \
-    resume 'swaymsg "output * dpms on"'         \
-    before-sleep $locker
-
 ## Lock Screen
-bindsym $mod+x exec '$HOME/.config/sway/scripts/lockman.sh'
+bindsym $mod+x exec swaylock
 
 # Start a floating terminal
 bindsym $mod+Return exec $term-float
