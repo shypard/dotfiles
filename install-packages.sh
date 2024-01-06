@@ -5,15 +5,19 @@ set -e
 sudo dnf enable -y \
     eddsalkield/swaylock-effects \
 
-
 # installing login-, session and window manager
 sudo dnf install -y \
     greetd-tuigreet \
     seatd
 
+# Install applications from packages.txt
+for p in $(grep -v ^# packages.txt | grep -v ^$); do
+    echo -n "Installing $p... "
+    sudo dnf install -assumeyes --quiet $p
+done
+
 # installing user applications
 sudo dnf install -y     \
-    alacritty           \
     clang               \
     dnf-plugins-core    \
     git                 \
@@ -25,11 +29,8 @@ sudo dnf install -y     \
     swappy              \
     swaylock-effects    \
     pandoc              \
-    wofi                \
     zathura             \
     zathura-plugins-all \
-    zsh
-
 
 # install misc
 pip3 install --user jedi --upgrade # neovim python support
