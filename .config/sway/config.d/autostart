@@ -11,7 +11,7 @@ exec udiskie
 exec mako
 
 # Autotiling
-exec autotiling
+exec $HOME/.local/bin/autotiling
 
 # Idle management
 exec swayidle
