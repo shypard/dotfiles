@@ -36,3 +36,5 @@ endfunction
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+let g:coc_filetype_map = {'tex': 'latex'}

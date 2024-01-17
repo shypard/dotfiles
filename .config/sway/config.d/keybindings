@@ -14,7 +14,7 @@ set $term-float alacritty
 set $launcher 'wofi -c $HOME/.config/wofi/config -I'
 
 ## Lock Screen
-bindsym $mod+x exec swaylock
+bindsym $mod+x exec '$HOME/.config/sway/scripts/lockscreen.sh'
 
 # Start a floating terminal
 bindsym $mod+Return exec $term-float
