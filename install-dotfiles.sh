@@ -29,7 +29,12 @@ echo "Backup created at $tmp_dir/$tarball. Installing new dotfiles..."
 mkdir -p $HOME/.config 
 cp -r .config/* $HOME/.config/
 
+# Copy scripts directory to ~/.local/scripts
+cp -r .local/scripts $HOME/.local/scripts/
+
 echo "Installation complete! Cleaning up..."
 
 # Clean up temporary files
 rm -rf "$tmp_dir"
+
+

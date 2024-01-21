@@ -1,0 +1,74 @@
+#!/bin/sh
+
+VERSION="1.0"
+ADDRESS_BOOK_FILE="$HOME/.config/aerc/contacts.txt"
+
+# Function to print usage information
+usage() {
+    printf "Usage: $0 [OPTIONS]\n"
+    printf "Options:\n"
+    printf "  -a, --add <name>      Add a new contact with the specified name\n"
+    printf "  -d, --delete <name>   Delete the contact with the specified name\n"
+    printf "  -s, --search <query>  Search for contacts by name or email\n"
+    printf "  -l, --list            List all contacts\n"
+    printf "  -v, --version         Display version information\n"
+    exit 1
+}
+
+# Function to add a new contact
+add_contact() {
+    printf "Enter email for $1: "
+    read -r email
+    printf "%s\t%s\n" "$email" "$1" >> "$ADDRESS_BOOK_FILE"
+    printf "Contact added: %s <%s>\n" "$1" "$email"
+    exit 0
+}
+
+# Function to delete a contact
+delete_contact() {
+    grep -v -w "$1" "$ADDRESS_BOOK_FILE" > "$ADDRESS_BOOK_FILE.tmp"
+    mv "$ADDRESS_BOOK_FILE.tmp" "$ADDRESS_BOOK_FILE"
+    printf "Contact deleted: %s\n" "$1"
+    exit 0
+}
+
+# Function to search for contacts by name or email
+search_contacts() {
+    grep -i "$1" "$ADDRESS_BOOK_FILE" # | sed 's/\t/ < /'
+}
+
+# Function to list all contacts
+list_all_contacts() {
+    cat "$ADDRESS_BOOK_FILE" # | sed 's/\t/ < /'
+}
+
+# Parse command line options using getopts
+while getopts ":a:d:s:lv" opt; do
+    case $opt in
+    a|--add)
+        add_contact "$OPTARG"
+        ;;
+    d|--delete)
+        delete_contact "$OPTARG"
+        ;;
+    s|--search)
+        search_contacts "$OPTARG"
+        exit 0
+        ;;
+    l|--list)
+        list_all_contacts
+        exit 0
+        ;;
+    v|--version)
+        printf "address_book.sh version %s\n" "$VERSION"
+        exit 0
+        ;;
+    \?)
+        printf "Invalid option: -%s\n" "$OPTARG"
+        usage
+        ;;
+    esac
+done
+
+# If no options are provided, show usage information
+usage

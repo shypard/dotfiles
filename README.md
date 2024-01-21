@@ -38,7 +38,7 @@ the sources for the colors.
 
 This lists various open points, which are left to implement/configure/todo.
 
-- Auto mount USB sticks 
+- Add todo list
 
 ## Troubleshooting
 

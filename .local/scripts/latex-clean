@@ -1,0 +1,47 @@
+#!/bin/bash
+# This script deletes all auxiliary files created by LaTeX.
+# Usage: latex-clean -p <path> [-r]
+# Options:
+#   -p <path>   Path to the directory containing the LaTeX files.
+#   -r          Recursively delete all auxiliary files in the directory 
+#               and its subdirectories.
+# 
+# Installation: place this script to your $PATH and make it executable.
+
+# LaTeX and Biber auxiliary file extensions
+exts="aux acn acr alg bbl bcf blg brf     \
+      dvi fdb_latexmk fls idx ilg ist     \
+      ind lof log lol lot nav out run.xml \
+      snm tdo toc synctex.gz vrb          \
+"
+
+# parse options
+while getopts ":p:r" opt; do
+    case $opt in
+        p) path="$OPTARG"
+        ;;
+        r) recursion=true
+        ;;
+        \?) echo "Invalid option: -$OPTARG" >&2
+        exit 1
+        ;;
+        :) echo "Option -$OPTARG requires an argument." >&2
+        exit 1
+        ;;
+    esac
+done
+
+# check if path is provided
+if [ -z "$path" ]; then
+    echo "No path provided. Use -p option to specify the path." >&2
+    exit 1
+fi
+
+# iterate over all extensions and delete them 
+for ext in $exts; do
+    if [ "$recursion" = true ]; then
+        find $path -name "*.$ext" -delete
+    else
+        rm -f $path/*.$ext
+    fi
+done
