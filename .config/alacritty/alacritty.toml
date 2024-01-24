@@ -1,0 +1,24 @@
+import = [
+    "~/.config/alacritty/colors/gruvbox_material_soft_dark.toml",
+]
+
+[font]
+size = 11.0
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Alt"
+
+[window]
+opacity = 0.95
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 160
+lines = 45
+
